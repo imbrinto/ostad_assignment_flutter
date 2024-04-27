@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:ostad_assignment_flutter/image_pallete.dart';
+import 'package:ostad_assignment_flutter/mood_page.dart';
 import 'package:ostad_assignment_flutter/photo_container.dart';
 
 class HomePage extends StatelessWidget {
@@ -11,10 +12,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(CupertinoIcons.back,color: Colors.white,),
-          iconSize: 35,
+        leading: const Icon(
+          CupertinoIcons.back,
+          color: Colors.white,
+          size: 30,
         ),
         centerTitle: true,
         title: const Text(
@@ -23,32 +24,63 @@ class HomePage extends StatelessWidget {
         ),
         backgroundColor: HexColor('#2CAB00'),
         actions: const [
-          Icon(Icons.more_vert,color: Colors.white,)
+          Icon(
+            Icons.more_vert,
+            color: Colors.white,
+          )
         ],
       ),
-
-
       body: Padding(
         padding: const EdgeInsets.fromLTRB(15, 10, 10, 10),
-        child: Wrap(
-          alignment: WrapAlignment.start,
-          crossAxisAlignment: WrapCrossAlignment.start,
-          spacing: 20,
-          children: [
-            GestureDetector(
-                onTap: () {},
-                child: const PhotoContainer(
-                  photoLink: ImagePallete.mood,
-                  photoText: 'Mood',
-                )),
-            const PhotoContainer(photoLink: ImagePallete.asthetic,photoText: 'Asthetic',),
-            const PhotoContainer(photoLink: ImagePallete.animals,photoText: 'Animals',),
-            const PhotoContainer(photoLink: ImagePallete.city,photoText: 'City',),
-            const PhotoContainer(photoLink: ImagePallete.travel,photoText: 'Travel',),
-            const PhotoContainer(photoLink: ImagePallete.sky,photoText: 'Sky',),
-            const PhotoContainer(photoLink: ImagePallete.road,photoText: 'Road',),
-            const PhotoContainer(photoLink: ImagePallete.flowers,photoText: 'Flowers',),
-          ],
+        child: SingleChildScrollView(
+          child: Wrap(
+            alignment: WrapAlignment.start,
+            crossAxisAlignment: WrapCrossAlignment.start,
+            spacing: 20,
+            children: [
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MoodPage(),
+                      ),
+                    );
+                  },
+                  child: const PhotoContainer(
+                    photoLink: ImagePallete.mood,
+                    photoText: 'Mood',
+                  )),
+              const PhotoContainer(
+                photoLink: ImagePallete.asthetic,
+                photoText: 'Asthetic',
+              ),
+              const PhotoContainer(
+                photoLink: ImagePallete.animals,
+                photoText: 'Animals',
+              ),
+              const PhotoContainer(
+                photoLink: ImagePallete.city,
+                photoText: 'City',
+              ),
+              const PhotoContainer(
+                photoLink: ImagePallete.travel,
+                photoText: 'Travel',
+              ),
+              const PhotoContainer(
+                photoLink: ImagePallete.sky,
+                photoText: 'Sky',
+              ),
+              const PhotoContainer(
+                photoLink: ImagePallete.road,
+                photoText: 'Road',
+              ),
+              const PhotoContainer(
+                photoLink: ImagePallete.flowers,
+                photoText: 'Flowers',
+              ),
+            ],
+          ),
         ),
       ),
     );

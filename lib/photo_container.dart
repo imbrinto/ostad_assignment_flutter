@@ -1,19 +1,25 @@
 import 'package:flutter/material.dart';
 
 class PhotoContainer extends StatelessWidget {
+  final double containerWidth;
+  final double containerHeight;
   final String photoText;
   final photoLink;
 
   const PhotoContainer(
-      {super.key, required this.photoLink, required this.photoText});
+      {super.key,
+      required this.photoLink,
+      this.photoText = '',
+      this.containerWidth = 150,
+      this.containerHeight = 150});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(12, 5, 5, 10),
       child: Container(
-        width: 150,
-        height: 150,
+        width: containerWidth,
+        height: containerHeight,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20.0),
