@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class PhotoContainer extends StatelessWidget {
-
-
+  final photoLink;
+  const PhotoContainer({super.key, required this.photoLink});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class PhotoContainer extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.black,
         borderRadius: BorderRadius.circular(20.0),
-        // image:
+        image: photoLink,
       ),
     );
   }
