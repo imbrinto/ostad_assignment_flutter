@@ -22,12 +22,8 @@ class HomePage extends StatelessWidget {
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
         ),
         backgroundColor: HexColor('#2CAB00'),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.more_horiz),
-            color: Colors.white,
-          )
+        actions: const [
+          Icon(Icons.more_vert,color: Colors.white,)
         ],
       ),
 
@@ -43,14 +39,15 @@ class HomePage extends StatelessWidget {
                 onTap: () {},
                 child: const PhotoContainer(
                   photoLink: ImagePallete.mood,
+                  photoText: 'Mood',
                 )),
-            const PhotoContainer(photoLink: ImagePallete.asthetic,),
-            const PhotoContainer(photoLink: ImagePallete.animals,),
-            const PhotoContainer(photoLink: ImagePallete.city,),
-            const PhotoContainer(photoLink: ImagePallete.travel,),
-            const PhotoContainer(photoLink: ImagePallete.sky,),
-            const PhotoContainer(photoLink: ImagePallete.road,),
-            const PhotoContainer(photoLink: ImagePallete.flowers,),
+            const PhotoContainer(photoLink: ImagePallete.asthetic,photoText: 'Asthetic',),
+            const PhotoContainer(photoLink: ImagePallete.animals,photoText: 'Animals',),
+            const PhotoContainer(photoLink: ImagePallete.city,photoText: 'City',),
+            const PhotoContainer(photoLink: ImagePallete.travel,photoText: 'Travel',),
+            const PhotoContainer(photoLink: ImagePallete.sky,photoText: 'Sky',),
+            const PhotoContainer(photoLink: ImagePallete.road,photoText: 'Road',),
+            const PhotoContainer(photoLink: ImagePallete.flowers,photoText: 'Flowers',),
           ],
         ),
       ),
