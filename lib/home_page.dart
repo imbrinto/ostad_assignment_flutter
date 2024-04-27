@@ -30,30 +30,27 @@ class HomePage extends StatelessWidget {
           )
         ],
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(18.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+
+
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(15, 10, 10, 10),
+        child: Wrap(
+          alignment: WrapAlignment.start,
+          crossAxisAlignment: WrapCrossAlignment.start,
+          spacing: 20,
           children: [
-            Wrap(
-              children: [
-                Flexible(
-                  child: PhotoContainer(photoLink: ImagePallete.mood,)
-                ),
-                SizedBox(
-                  width: 20,
-                ),
-                Flexible(
-                  child: PhotoContainer(photoLink: ImagePallete.asthetic,)
-                ),
-                SizedBox(
-                  width: 20,
-                ),
-                Flexible(
-                  child: PhotoContainer(photoLink: ImagePallete.animals,)
-                ),
-              ],
-            ),
+            GestureDetector(
+                onTap: () {},
+                child: const PhotoContainer(
+                  photoLink: ImagePallete.mood,
+                )),
+            const PhotoContainer(photoLink: ImagePallete.asthetic,),
+            const PhotoContainer(photoLink: ImagePallete.animals,),
+            const PhotoContainer(photoLink: ImagePallete.city,),
+            const PhotoContainer(photoLink: ImagePallete.travel,),
+            const PhotoContainer(photoLink: ImagePallete.sky,),
+            const PhotoContainer(photoLink: ImagePallete.road,),
+            const PhotoContainer(photoLink: ImagePallete.flowers,),
           ],
         ),
       ),
