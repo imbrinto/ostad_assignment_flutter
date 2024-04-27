@@ -16,7 +16,7 @@ class PhotoContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(12, 5, 5, 10),
+      padding: const EdgeInsets.all(10),
       child: Container(
         width: containerWidth,
         height: containerHeight,
@@ -26,15 +26,15 @@ class PhotoContainer extends StatelessWidget {
           image: photoLink,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.35),
-              spreadRadius: 4,
-              blurRadius: 5,
-              offset: const Offset(0, 4),
+              color: Colors.black.withOpacity(0.20),
+              spreadRadius: 8,
+              blurRadius: 10,
+              offset: const Offset(0, 10),
             )
           ],
         ),
         child: Container(
-          alignment: const Alignment(-0.7,0.78),
+          alignment: const Alignment(-0.7, 0.78),
           child: Text(
             photoText,
             style: const TextStyle(

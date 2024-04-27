@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:ostad_assignment_flutter/image_pallete.dart';
 import 'package:ostad_assignment_flutter/photo_container.dart';
@@ -34,13 +35,41 @@ class MoodPage extends StatelessWidget {
           )
         ],
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(20.0),
-        child: Wrap(
-          alignment: WrapAlignment.start,
-          children: [
-            PhotoContainer(photoLink: ImagePallete.mood,containerWidth: 390, containerHeight: 325,),
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(10, 1, 10, 10),
+          child: Wrap(
+            alignment: WrapAlignment.start,
+            children: [
+              const PhotoContainer(
+                photoLink: ImagePallete.mood,
+                containerWidth: 390,
+                containerHeight: 275,
+              ),
+              Container(
+                padding: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                // color: Colors.blue,
+                child: const Text('Mood With Nature',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 25,
+                        fontWeight: FontWeight.w400)),
+              ),
+                Container(
+                  padding: const EdgeInsets.fromLTRB(20, 10, 10, 5),
+                  // color: Colors.blue,
+                  child: const Wrap(
+                    children: [Text(
+                        'Being in nature, or even viewing scenes of nature, reduces anger, fear, and stress and increases pleasant feelings',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w400))],
+                  ),
+                ),
+
+            ],
+          ),
         ),
       ),
     );

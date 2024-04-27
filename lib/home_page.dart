@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(15, 10, 10, 10),
+        padding: const EdgeInsets.fromLTRB(15, 3, 10, 10),
         child: SingleChildScrollView(
           child: Wrap(
             alignment: WrapAlignment.start,
