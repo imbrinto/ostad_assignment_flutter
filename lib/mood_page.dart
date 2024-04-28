@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:ostad_assignment_flutter/image_pallete.dart';
 import 'package:ostad_assignment_flutter/photo_container.dart';
@@ -26,7 +24,7 @@ class MoodPage extends StatelessWidget {
           centerTitle: true,
           title: const Text(
             "Mood",
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600,fontFamily: 'Poppins'),
           ),
           backgroundColor: HexColor('#2CAB00'),
           actions: const [
@@ -69,6 +67,7 @@ class MoodPage extends StatelessWidget {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w400,
                                         fontSize: 18,
+                                      fontFamily: 'Poppins'
                                       ),
                                 ),
                                 const SizedBox(
@@ -82,7 +81,9 @@ class MoodPage extends StatelessWidget {
                                       ?.copyWith(
                                           color: Colors.black,
                                           fontWeight: FontWeight.w400,
-                                          fontSize: 14),
+                                          fontSize: 14,
+                                      fontFamily: 'Poppins'
+                                  ),
                                 ),
                                 const SizedBox(
                                   height: 15,
@@ -96,7 +97,9 @@ class MoodPage extends StatelessWidget {
                                     'See More',
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontWeight: FontWeight.w400),
+                                        fontWeight: FontWeight.w400,
+                                        fontFamily: 'Poppins'
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -113,6 +116,7 @@ class MoodPage extends StatelessWidget {
                                           color: HexColor('#2CAB00'),
                                           fontWeight: FontWeight.w400,
                                           fontSize: 14,
+                                        fontFamily: 'Poppins'
                                         ),
                                   ),
                                 ),
@@ -154,6 +158,7 @@ class MoodPage extends StatelessWidget {
                             color: Colors.black,
                             fontWeight: FontWeight.w400,
                             fontSize: 18,
+                          fontFamily: 'Poppins'
                           ),
                     ),
                   ),
@@ -167,7 +172,8 @@ class MoodPage extends StatelessWidget {
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
                           color: Colors.black,
                           fontWeight: FontWeight.w400,
-                          fontSize: 14),
+                          fontSize: 14,
+                          fontFamily: 'Poppins'),
                     ),
                   ),
                   const SizedBox(
@@ -184,7 +190,8 @@ class MoodPage extends StatelessWidget {
                       child: const Text(
                         'See More',
                         style: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.w400),
+                            color: Colors.white, fontWeight: FontWeight.w400,
+                            fontFamily: 'Poppins'),
                       ),
                     ),
                   ),
@@ -199,6 +206,7 @@ class MoodPage extends StatelessWidget {
                             color: HexColor('#2CAB00'),
                             fontWeight: FontWeight.w400,
                             fontSize: 18,
+                          fontFamily: 'Poppins'
                           ),
                     ),
                   ),

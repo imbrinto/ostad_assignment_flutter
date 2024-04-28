@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         title: const Text(
           "Photo Gallery",
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600,fontFamily: 'Poppins',fontSize:20 ),
         ),
         backgroundColor: HexColor('#2CAB00'),
         actions: const [
