@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
           child: Wrap(
             alignment: WrapAlignment.start,
             crossAxisAlignment: WrapCrossAlignment.start,
-            spacing: 20,
+            spacing: 15,
             children: [
               GestureDetector(
                   onTap: () {
